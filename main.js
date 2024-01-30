@@ -19,6 +19,52 @@ async function InitApp() {
   });
 
   await InitFirstPersonController(characterControllerSceneUUID);
+
+  // Saw
+  SDK3DVerse.engineAPI.playAnimationSequence(
+    "c3baeed0-fb83-4499-ad50-a0bc438e34df",
+    { playbackSpeed: 0.5 }
+  );
+
+  // Orb
+  SDK3DVerse.engineAPI.playAnimationSequence(
+    "5e406c5f-f90d-4221-9763-abb039cb1a7f",
+    { playbackSpeed: 0.2 }
+  );
+
+  // Orb
+  SDK3DVerse.engineAPI.playAnimationSequence(
+    "532f25d1-58c4-45bd-ae9d-07188e54171b",
+    { playbackSpeed: 0.2 }
+  );
+
+  // Dragon
+  SDK3DVerse.engineAPI.playAnimationSequence(
+    "d975452f-b799-47c3-b9db-207f16900bc9",
+    { playbackSpeed: 0.05 }
+  );
+
+  // Water
+  SDK3DVerse.engineAPI.playAnimationSequence(
+    "cbe41b27-2baf-4eff-98ff-60e3d0f02627",
+    { playbackSpeed: 0.1 }
+  );
+
+  let b = 0;
+  SDK3DVerse.engineAPI.onEnterTrigger((emitterEntity, triggerEntity) => {
+    b = 100;
+    document.getElementById("display-canvas").style.filter = "blur(100px)";
+    const blurFunc = () => {
+      b -= 10;
+      b = b < 0 ? 0 : b;
+
+      document.getElementById("display-canvas").style.filter = `blur(${b}px)`;
+      if (b > 0) {
+        setTimeout(blurFunc, 30);
+      }
+    };
+    setTimeout(blurFunc, 30);
+  });
 }
 
 //------------------------------------------------------------------------------

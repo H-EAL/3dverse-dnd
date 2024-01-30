@@ -1,13 +1,4 @@
-// Find your Public Token in the 3dverse Console (https://console.3dverse.com):
-// - Go to the API Access page.
-// - Copy the Public Token and paste it below.
-
-export const publicToken = %YOUR_PUBLIC_TOKEN%;
-
-// Replace asset UUIDs:
-// - Go to the Asset Browser page.
-// - Double click on the Public folder to open it.
-// - Select a scene and copy the Asset UUID to replace it below.
-
-export const mainSceneUUID = %YOUR_MAIN_SCENE_UUID%;
-export const characterControllerSceneUUID = %YOUR_CHARACTER_CONTROLLER_SCENE_UUID%;
+export const publicToken = "public_RtRbMKgPJZNkX3tH";
+export const mainSceneUUID = "101063f7-1b2c-4aba-8dc2-5f8421e8a63b";
+export const characterControllerSceneUUID =
+  "19b63381-3667-42dc-8c5a-ce4ed2308f63";
